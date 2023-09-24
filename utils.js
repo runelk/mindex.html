@@ -1,5 +1,5 @@
 /**
- * Template string to prepare HTML strings.
+ * Small function for preparing template strings.
  * 
  * Usage:
  * const title = 'My Title';

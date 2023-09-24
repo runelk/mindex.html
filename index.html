@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script type="importmap">
+      {
+        "imports": {
+          "mindex": "https://cdn.jsdelivr.net/gh/runelk/mindex.html@main/index.js"
+        }
+      }
+    </script>
+
     <title>begindex.html</title>
     <link
       rel="stylesheet"
@@ -37,9 +45,9 @@
     </template>
 
     <script type="module">
-      import * as index from "https://cdn.jsdelivr.net/gh/runelk/mindex.html@main/index.js";
+      import * as mindex from "mindex";
 
-      index.init(async () => {
+      mindex.init(async () => {
         document.querySelector("#btn-001").addEventListener("click", () => {
           document.querySelector("#img-001").src =
             "https://picsum.photos/512?random=" + Math.random();
