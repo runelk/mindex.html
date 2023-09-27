@@ -1,0 +1,35 @@
+<body>
+  <div class="container">
+    <div class="row">
+      <h1>mindex.html</h1>
+    </div>
+
+    <div class="row">
+      <img class="column" id="img-001" src="https://picsum.photos/512" />
+    </div>
+    <div class="row">
+      <button class="column" id="btn-001">Click me</button>
+    </div>
+    <mindex-base></mindex-base>
+  </div>
+
+  <template id="template-001">
+    <div class="container">
+      <p>Look at me, I'm a p!</p>
+    </div>
+  </template>
+
+  <script type="module">
+    import * as mindex from "mindex";
+
+    mindex.init(async () => {
+      document.querySelector("#btn-001").addEventListener("click", () => {
+        document.querySelector("#img-001").src =
+          "https://picsum.photos/512?random=" + Math.random();
+      });
+      document.body.appendChild(
+        document.querySelector("#template-001").content.cloneNode(true)
+      );
+    });
+  </script>
+</body>

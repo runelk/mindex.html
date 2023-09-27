@@ -1,6 +1,6 @@
-import { h } from "../utils.js"
+import { h } from "../utilities/index.js"
 
-class MindexBaseElement extends HTMLElement {
+class BaseElement extends HTMLElement {
   name = "Mindex Base Element"
   style = h`
     <style>
@@ -22,4 +22,4 @@ class MindexBaseElement extends HTMLElement {
   }
 }
 
-customElements.define('mindex-base', MindexBaseElement)
+customElements.define('mindex-base', BaseElement)
